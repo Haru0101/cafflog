@@ -25,7 +25,6 @@
     </head>
     <body class="antialiased">
         <div id="app">
-            test
         </div>
         <!-- body タグの最後に足す-->
         <script src=" {{ mix('js/app.js') }} "></script>
