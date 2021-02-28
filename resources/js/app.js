@@ -30,7 +30,6 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 import Vue from 'vue'
 import App from './App.vue'
 import VueSwal from 'vue-swal'
-import '../css/tailwind.css'
 Vue.use(VueSwal)
 
 const app = new Vue({
