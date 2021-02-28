@@ -17,3 +17,7 @@ export default {
     }
 }
 </script>
+<style lang="scss" scoped>
+li {list-style: none;width: 100%;height: 100px;display: block;margin: 0;padding: 0;}
+button {width: 100%;height: 100%;}
+</style>

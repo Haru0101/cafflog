@@ -25,7 +25,13 @@ export default {
                 quantity: this.newDrink.quantity
             };
             this.$parent.drinks.push(newDrink);
+            this.newDrink.name = "";
+            this.newDrink.quantity = "";
         }
     }
 }
 </script>
+<style lang="scss" scoped>
+label {display: block;}
+button {display: block;margin-top: 40px;height: 80px;width: 100%;font-size: 16px;}
+</style>

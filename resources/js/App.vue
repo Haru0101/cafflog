@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="wrapper">
         <section>
             <EditDisplay v-if="isEditDisplay"></EditDisplay>
             <DrinkList :drinks="drinks" v-else></DrinkList>
@@ -38,3 +38,6 @@
     }
 
 </script>
+<style lang="scss" scoped>
+.wrapper {padding: 10px 15px;}
+</style>
