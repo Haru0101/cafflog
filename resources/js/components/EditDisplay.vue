@@ -8,30 +8,50 @@
     </div>
 </template>
 <script>
-export default {
-    data(){
-        return {
-            newDrink: {
-                name:"",
-                quantity: ""
+    export default {
+        data() {
+            return {
+                newDrink: {
+                    name: "",
+                    quantity: ""
+                }
+            }
+        },
+        methods: {
+            addDrink() {
+                console.log('addDrink');
+                let newDrink = {
+                    name: this.newDrink.name,
+                    quantity: this.newDrink.quantity
+                };
+                this.$parent.drinks.push(newDrink);
+                this.newDrink.name = "";
+                this.newDrink.quantity = "";
             }
         }
-    },
-    methods:{
-        addDrink() {
-            console.log('addDrink');
-            let newDrink = {
-                name: this.newDrink.name,
-                quantity: this.newDrink.quantity
-            };
-            this.$parent.drinks.push(newDrink);
-            this.newDrink.name = "";
-            this.newDrink.quantity = "";
-        }
     }
-}
+
 </script>
 <style lang="scss" scoped>
-label {display: block;}
-button {display: block;margin-top: 40px;height: 80px;width: 100%;font-size: 16px;}
+    label {
+        display: block;
+    }
+
+    button {
+        display: block;
+        margin-top: 40px;
+        height: 80px;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    input {
+        border-radius: 3px;
+        box-shadow: inner 0 0 4px rgba(0, 0, 0, 0.2);
+
+        &:focus {
+            border: solid 1px #EEA34A;
+        }
+    }
+
 </style>
